@@ -1,7 +1,6 @@
-#language: python
-#python:
-#  - "3.5"
-#cache: pip
+language: python
+python:
+  - "3.5"
 #install:
   # Install any dependencies required for building your site here.
   # `awscli` is required for invalidation of CloudFront distributions.
