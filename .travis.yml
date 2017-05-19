@@ -1,11 +1,11 @@
-language: python
-python:
-  - "3.5"
-cache: pip
-install:
+#language: python
+#python:
+#  - "3.5"
+#cache: pip
+#install:
   # Install any dependencies required for building your site here.
   # `awscli` is required for invalidation of CloudFront distributions.
-  - pip install awscli
+#  - pip install awscli
 # script:
   # Build your site (e.g., HTML, CSS, JS) here.
   #- make build
@@ -27,8 +27,8 @@ deploy:
   # local_dir: build
   # Set the Cache-Control header.
   cache_control: "max-age=21600"
-after_deploy:
+#after_deploy:
   # Allow `awscli` to make requests to CloudFront.
-  - aws configure set preview.cloudfront true
+#  - aws configure set preview.cloudfront true
   # Invalidate every object in the targeted distribution.
-  - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
+#  - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
